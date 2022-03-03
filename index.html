@@ -4,6 +4,7 @@
         <meta name="color-scheme" content="light dark">
         <meta name="supported-color-schemes" content="light dark">
         <meta charset="utf-8">
+        <title></title>
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="x-apple-disable-message-reformatting">
@@ -36,7 +37,6 @@
                 a {color: #ff444f; font-family: Arial, sans-serif;}
             </style>
         <![endif]-->
-        <title></title>
         <style type="text/css">
             /* FONTS */
             @media screen {
@@ -163,7 +163,11 @@
                 line-height: 40px;
                 margin: 0;
             }
-            img.g-img + div {display:none;}            
+            .justify-word {
+                text-align: justify;
+                text-justify: inter-word;
+            }
+                        
             @media screen and (max-width: 590px)  {
                 .button, .button-secondary {
                     margin: 5px 0 !important;
@@ -171,6 +175,11 @@
             }
             /* MOBILE STYLES */
             @media screen and (max-width: 620px) {
+                .img-max {
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    height: auto !important;
+                }
                 .max-width {
                     max-width: 100% !important;
                 }
@@ -178,341 +187,158 @@
                     width: 100% !important;
                     max-width: 100% !important;
                 }
+                .mb-lowwidth{
+                    width: 70px !important; 
+                }
                 .mobile-visible {
                     display:inline-block !important;
-                }
-                .mobile-visible-block {
-                    display: block !important;
                 }
                 .mobile-hide {
                     display:none !important;
                 }
-                .mobile-side {
-                    padding-right: 16px !important;
-                    padding-left: 16px !important;
+                .mobile-nopadding {
+                    padding: 0 !important;
                 }
-                .mobile-sideL {
+                .mobile-side {
+                    padding-right: 15px !important;
+                    padding-left: 15px !important;
+                }
+                .mobile-side2 {
                     padding-right: 25px !important;
                     padding-left: 25px !important;
+                }
+                .mobile-negmargin {
+                    margin-top: -15px !important;
+                }
+                .mobile-center {
+                    text-align:center !important;
+                }
+                .mobile-unvisible {
+                    display: none!important;
+                } 
+                .mobile-bgcolor-gray {
+                    background-color: #eeeeee !important;
+                }
+                .mb-bg-lightgray{
+                    background-color: #f5f7fa !important; 
+                }
+                .mb-padding-top{
+                    padding-top: 30px !important;
+                }
+                .mobile-visible-block {
+                    display: block !important;
                 }
                 .mobile-low-top-padding {
                     padding-top: 1px !important;
                 }
-                .mobile-align-center {
-                    text-align: center !important;
+                .mb-font-size{
+                    font-size: 24px !important;
                 }
-                .mobile-side-high {
-                    padding-right: 40px !important;
-                    padding-left: 40px !important;
-                }
-                .mb-0padding-topdown {
-                    padding-top: 0 !important;
-                    padding-bottom: 0 !important;
-                }
-                .mb-lowwidth{
-                    width: 140px !important; 
-                }
-                .mb-title-font{
-                    font-size: 26px !important; 
-                }
-
             }
             @media (prefers-color-scheme: dark ) {
                 /* Shows Dark Mode-Only Content, Like Images */
+                
                 .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
-                .dark-img2 { display:block !important; width: 100% !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
-                .dark-imglow { display:block !important; width: 147px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
+                .dark-imglow { display:block !important; width: 100px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
         
                 /* Hides Light Mode-Only Content, Like Images */
                 .light-img { display:none; display:none !important; }
    
                 /* Custom Dark Mode Background Color */
                 .darkmodeblack { background-color:#0e0e0e !important; }
-                .darkmodelowblack { background-color: #151515 !important; }
-                .darkmodetoolowblack { background-color: #242828 !important; }
+                .darkmodelowblack { background-color: #202020 !important; }
    
                 /* Custom Dark Mode Font Colors */
                  h1, h2, p, span, a, b { color: #ffffff !important; }
                  .darkmodegray { color: #6e6e6e !important; }
                  .darkcolor-subtext{ color: #c2c2c2 !important; }
                  .darkcolor-white{ color: #ffffff !important; }
+                 .darkborder{ border-color: #6e6e6e !important; }
    
                 /* Custom Dark Mode Text Link Color */
                 .link { color: #91ADD4 !important; }
             } 
             /* Shows Dark Mode-Only Content, Like Images */
             [data-ogsc] .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
-            [data-ogsc] .dark-img2 { display:block !important; width: 100% !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
-            [data-ogsc] .dark-imglow { display:block !important; width: 147px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
+            [data-ogsc] .dark-imglow { display:block !important; width: 100px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
+            
             /* Hides Light Mode-Only Content, Like Images */
             [data-ogsc] .light-img { display:none; display:none !important; }
   
             /* Custom Dark Mode Background Color */
-            [data-ogsc] .darkmodeblack { color:#c2c2c2 !important; background-color: #0e0e0e !important;}
-            [data-ogsc] .darkmodelowblack { background-color: #151515 !important; }
-            [data-ogsc] .darkmodetoolowblack { background-color: #242828 !important; }
+            [data-ogsc] .darkmodeblack { background-color: #0e0e0e !important;}
+            [data-ogsc] .darkmodelowblack { background-color: #202020 !important; }
   
             /* Custom Dark Mode Font Colors */
             [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-ogsc] a, [data-ogsc] b { color: #ffffff !important; }
             [data-ogsc] .darkmodegray { color: #6e6e6e !important; }
             [data-ogsc] .darkcolor-subtext{ color: #c2c2c2 !important; }
             [data-ogsc] .darkcolor-white{ color: #ffffff !important; }
+            [data-ogsc] .darkborder{ border-color: #6e6e6e !important; }
   
             /* Custom Dark Mode Text Link Color */
             [data-ogsc] .link { color: #91ADD4 !important; }
 
             @media (prefers-color-scheme: dark ) and (max-width: 620px)  {
-                .mobile-dark-displaynone{ display:none !important;}
-                [data-ogsc] .mobile-dark-displaynone{ display:none !important;}
-
-                .mobile-dark-display{ display:block !important;width: 100% !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important;}
-                [data-ogsc].mobile-dark-display{ display:block !important;width: 100% !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
-
-                .mobile-dark-bg{ background-color:#202020 !important;}
-                [data-ogsc] .mobile-dark-bg{ background-color:#202020!important;}
-
-                .dark-lowwidth-m{ display:block !important;width: 140px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important;}
-                [data-ogsc].dark-lowwidth-m{ display:block !important;width: 140px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
+                .dark-lowwidth-m{ display:block !important;width: 70px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important;}
+                [data-ogsc].dark-lowwidth-m{ display:block !important;width: 70px !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
             }
-            }          
-          
+
         </style>
     </head>
     <body style="background-color: #eeeeee; margin: 0 !important; padding: 0 !important;">
-        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-            <!-- HERO CARD -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">    
+             <!-- Email body -->
             <tr>
-                <td align="center" style="padding: 10px 0px 0px 0px;background-color: #eeeeee;" class="mobile-low-top-padding" >
+                <td bgcolor="#eeeeee" align="center" style="padding: 10px 0 0;" class="mobile-nopadding">
                     <!--[if (gte mso 9)|(IE)]>
-                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600"><tr><td align="center" valign="top" width="600">
+                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" ><tr><td align="center" valign="top" width="600" bgcolor="#ffffff">
                     <![endif]-->
-                    <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #fff; max-width: 600px;">
-                        <tr>
-                            <td  align="center" style="padding: 30px 30px 20px;background-color: #fff;" class="darkmodeblack">
-                                <a href="https://deriv.com/academy/">
-                                    <img class="light-img mb-lowwidth" src="https://static.deriv.com/logos/academy.png" width="147" style="display: block;" alt="Deriv.com">
+                    <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; max-width: 600px;" class="darkmodeblack">
+                        <!-- START HERO -->
+                         <tr>
+                            <td  align="center" style="padding: 30px 30px 20px;" class="darkmodeblack">
+                                <a href="https://www.deriv.com">
+                                    <img class="light-img mb-lowwidth" src="https://static.deriv.com/logos/deriv-black.png" width="100" style="display: block;" alt="Deriv.com">
                                     <div class="dark-imglow" style="display:none; overflow:hidden; float:left; width:0px; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;" align="center">
-                                        <img src="https://static.deriv.com/logos/academy-white.png" width="147" height="18" class="dark-lowwidth-m" alt="Deriv.com" style="color: #ffffff; font-family:'proxima_nova', Helvetica, Arial, sans-serif; text-align:center; font-weight:bold; font-size:36px; line-height:40px; text-decoration: none; margin: 0 auto; padding: 0;" border="0" />
+                                        <img src="https://static.deriv.com/logos/deriv-white.png" width="100" height="18" class="dark-lowwidth-m" alt="Deriv.com" style="color: #ffffff; font-family:'proxima_nova', Helvetica, Arial, sans-serif; text-align:center; font-weight:bold; font-size:36px; line-height:40px; text-decoration: none; margin: 0 auto; padding: 0;" border="0" />
                                     </div>                                   
                                 </a>
                             </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#fff" align="center"  class="darkmodeblack">
+                                <input type="image" class="g-img mobile-wrapper" src="https://static.deriv.com/email/images/general/tick.png"  width= "600" style="display: block;outline:none"/><div></div>
+                            </td>
                         </tr>   
                         <tr>
-                            <td align="center" style="padding: 5px 130px 0; background-color: #fff;" class="mobile-sideL darkmodeblack">
-                                <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 32px; line-height: 1.3 ; color: #333333; font-weight: 700;margin:0;" class="darkcolor-subtext mb-title-font">Fall in love with trading all over again</p>
-                            </td>
-                        </tr>             
-                    </table>
-                    <!--[if (gte mso 9)|(IE)]></td></tr></table>
-                    <![endif]-->
-                </td>
-            </tr>
-            <!-- END HERO -->
-            <tr>
-                <td bgcolor="#eeeeee" align="center" style="padding: 0px;">
-                    <!--[if (gte mso 9)|(IE)]>
-                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" ><tr><td align="center" valign="top" width="600">
-                    <![endif]-->
-                    <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; max-width: 600px;">
-                        <tr>
-                            <td colspan="2" align="center" style="padding: 30px 28px 10px; background-color: #fff;" class="mobile-side darkmodeblack">
-                                <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; color: #333333; font-size: 16px; font-weight: 400; line-height: 24px; margin: 0px;" class="darkcolor-subtext">February is the month of love, so here are our latest blogs and videos to reignite your passion for
-                                    trading!</p>
+                            <td align="center" style="padding: 15px 30px 0; background-color: #fff;" class="mobile-side darkmodeblack">
+                                <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 32px; line-height: 1.5 ; color: #333333; font-weight: 700;margin:0;" class="darkcolor-subtext">Want to change your email address?</p>
                             </td>
                         </tr>
-                        <!-- button -->
+                        <!-- END HERO --> 
                         <tr>
-                            <td colspan="2" bgcolor="#ffffff" align="center" style="padding: 15px 30px 10px; color: #333333; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 24px;" class="darkmodeblack">
+                            <td align="center" style="padding: 25px 30px 0; background-color: #fff;" class="mobile-side darkmodeblack">
+                                <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 14px; line-height: 1.5 ; color: #333333; font-weight: 300;margin:0;" class="darkcolor-subtext">Hit the button below to confirm that you want to change your email address:</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffffff" align="center" style="padding: 30px 30px 10px 30px;" class="darkmodeblack">
                                 <!--[if (gte mso 9)|(IE)]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://deriv.com/academy/" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="8%" stroke="f" fillcolor="#ff444f">
-                                    <w:anchorlock/>
-                                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">Go to Academy</center>
-                                    </v:roundrect>
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://deriv.com/reset-password/" style="height:40px;v-text-anchor:middle;width:180px;" arcsize="10%" strokecolor="#ff444f" fillcolor="#ff444f">
+                                <w:anchorlock/>
+                                <center style="color:#ffffff;font-family:sans-serif;font-size:14px;font-weight:bold;">Change email address</center>
+                                </v:roundrect>
                                 <![endif]-->
-                                <a class="button" href="https://deriv.com/academy/" style="mso-hide:all;">Go to Academy</a>
+                                <a class="button" href="https://deriv.com/reset-password/" style="mso-hide:all;"><span>Change email address</span></a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center" style="padding: 30px 28px 0; background-color: #fff;" class="mobile-side darkmodeblack">
-                                <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; color: #333333; font-size: 16px; font-weight: 700; line-height: 24px; margin: 0px;" class="darkcolor-subtext">What’s new in February</p>
-                            </td>
-                        </tr>
-                        <tr class="mobile-hide">
-                            <td bgcolor="#fff" align="center" style="padding: 15px 15px 0 30px; background-color: #fff;margin-left: 0 !important;" class="darkmodeblack">
-                                <a href="https://deriv.com/academy/blog/posts/what-is-forex-live-trading/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/feb1.png"  width= "240px" style="display: block;outline:none; margin-left: 0 !important;"/></a><div></div>
-                            </td>
-                            <td bgcolor="#fff" align="center" style="padding: 15px 30px 0 15px; background-color: #fff;" class="darkmodeblack">
-                                <a href="https://deriv.com/academy/blog/posts/why-the-trading-world-loves-the-mt-5-platform/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/fb2.png"  width= "240px" style="display: block;outline:none"/></a><div></div>
-                            </td>
-                        </tr>
-                        <tr class="mobile-hide">
-                            <td bgcolor="#fff" align="center" style="padding: 0 13px 20px 28px; background-color: #fff;margin-left: 0 !important;" class="darkmodeblack">
-                                <p width= "250px" align="center" style="padding-left: 5px;font-weight: 700;"> <a href="https://deriv.com/academy/blog/posts/what-is-forex-live-trading/" target="_blank" style="color: #333333" class="darkcolor-subtext">What is forex live trading?</a></p>
-                            </td>
-                            <td bgcolor="#fff" align="center" style="padding: 0 28px 20px 13px; background-color: #fff;" class="darkmodeblack">
-                                <p width= "250px" align="center" style="font-weight: 700;"><a href="https://deriv.com/academy/blog/posts/why-the-trading-world-loves-the-mt-5-platform/" target="_blank" style="color: #333" class="darkcolor-subtext">Why traders love MT5 </a></p>
-                            </td>
-                        </tr>
-                        <div >
-                            <tr align="center" style="display: none; mso-hide:all;background-color: #fff;" class="mobile-visible-block darkmodeblack">
-                                <td bgcolor="#fff" align="center" style="padding: 30px 15px 15px; background-color: #fff;" class="mobile-side darkmodeblack">
-                                    <a href="https://deriv.com/academy/blog/posts/what-is-forex-live-trading/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/feb1.png" width="280" style="display: block;outline:none"/></a><div></div><p style="font-weight: 700;"><a href="https://deriv.com/academy/blog/posts/what-is-forex-live-trading/" target="_blank" style="color: #333" class="darkcolor-subtext">What is crypto</a></p>
-                                </td>
-                            </tr> 
-                            <tr align="center" style="display: none; mso-hide:all;background-color: #fff;" class="mobile-visible-block darkmodeblack">
-                                <td bgcolor="#fff" align="center" style="padding: 10px 15px; background-color: #fff;" class="mobile-side darkmodeblack">
-                                    <a href="https://deriv.com/academy/blog/posts/why-the-trading-world-loves-the-mt-5-platform/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/fb2.png" width="280" style="display: block;outline:none;"/></a><div></div><p style="font-weight: 700;"><a href="https://deriv.com/academy/blog/posts/why-the-trading-world-loves-the-mt-5-platform/" target="_blank" style="color: #333" class="darkcolor-subtext">What is CFD trading</a></p>
-                                </td>
-                            </tr> 
-                        </div>
-                        <tr class="mobile-hide">
-                            <td bgcolor="#fff" align="center" style="padding: 0 15px 0 30px; background-color: #fff;margin-left: 0 !important;" class="darkmodeblack">
-                                <a href="https://deriv.com/academy/blog/posts/automated-trading-what-you-need-to-know/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/feb3.png"  width= "240px" style="display: block;outline:none; margin-left: 0 !important;"/></a><div></div>
-                            </td>
-                            <td bgcolor="#fff" align="center" style="padding: 0 30px 0 15px; background-color: #fff;" class="darkmodeblack">
-                                <a href="https://deriv.com/academy/blog/posts/an-easy-guide-on-how-to-buy-crypto-on-deriv/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/feb4.png"  width= "240px" style="display: block;outline:none"/></a><div></div>
-                            </td>
-                        </tr>
-                        <tr class="mobile-hide">
-                            <td bgcolor="#fff" align="center" style="padding: 0 13px 20px 28px; background-color: #fff;margin-left: 0 !important;vertical-align: top;" class="darkmodeblack">
-                                <p width= "250px" align="center" style="padding-left: 5px;font-weight: 700;"><a href="https://deriv.com/academy/blog/posts/automated-trading-what-you-need-to-know/" target="_blank" style="color: #333" class="darkcolor-subtext">How automated trading works</a></p>
-                            </td>
-                            <td bgcolor="#fff" align="center" style="padding: 0 28px 20px 13px; background-color: #fff;vertical-align: top;" class="darkmodeblack">
-                                <p width= "250px" align="center" style="font-weight: 700;"><a href="https://deriv.com/academy/blog/posts/an-easy-guide-on-how-to-buy-crypto-on-deriv/" target="_blank" style="color: #333333" class="darkcolor-subtext">How to buy crypto</a></p>
-                            </td>
-                        </tr>
-                        <div >
-                            <tr align="center" style="display: none; mso-hide:all;background-color: #fff;" class="mobile-visible-block darkmodeblack">
-                                <td bgcolor="#fff" align="center" style="padding: 15px; background-color: #fff;" class="mobile-side darkmodeblack">
-                                    <a href="https://deriv.com/academy/blog/posts/automated-trading-what-you-need-to-know/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/feb3.png" width="280" style="display: block;outline:none"/></a><div></div><p style="font-weight: 700;font-size: 16px;"><a href="https://deriv.com/academy/blog/posts/automated-trading-what-you-need-to-know/" target="_blank" style="color: #333333;" class="darkcolor-subtext">How automated trading works</a></p>
-                                </td>
-                            </tr> 
-                            <tr align="center" style="display: none; mso-hide:all;background-color: #fff;" class="mobile-visible-block darkmodeblack">
-                                <td bgcolor="#fff" align="center" style="padding: 10px 15px; background-color: #fff;" class="mobile-side darkmodeblack">
-                                    <a href="https://deriv.com/academy/blog/posts/an-easy-guide-on-how-to-buy-crypto-on-deriv/" target="_blank"><input type="image" class="g-img" src="https://static.deriv.com/email/images/design/feb4.png" width="280" style="display: block;outline:none;"/></a><div></div><p style="font-weight: 700;"><a href="https://deriv.com/academy/blog/posts/an-easy-guide-on-how-to-buy-crypto-on-deriv/" target="_blank" style="color: #333333;" class="darkcolor-subtext">How to buy crypto</a></p>
-                                </td>
-                            </tr>
-                        </div>                                                                                 
+                        </tr>                                  
                     </table>
                     <!--[if (gte mso 9)|(IE)]></td></tr></table>
                     <![endif]-->
                 </td>
-            </tr>
-            <!-- CARD1 -->
-            <tr>
-                <td bgcolor="#eeeeee" align="center" style="padding: 0px; margin: 0">
-                    <!--[if (gte mso 9)|(IE)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="600"><tr><td align="center" valign="top" width="600"><![endif]-->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="  max-width: 600px;">
-                        <!-- COPY 2 col -->
-                        <tr>
-                            <td align="center" style="padding: 0;" class="darkmodeblack">
-                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
-                                    <tr>
-                                        <td align="center" valign="middle" style="background-color:#fff; font-size:0; padding:35px 0 40px;" class="darkmodeblack">
-                                            <!--[if (gte mso 9)|(IE)]>
-                                            <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="margin: 0;">
-                                            <tr>
-                                            <td align="left" valign="middle">
-                                            <![endif]-->
-                                            <div style="vertical-align: middle; display:inline-block; max-width:40%; min-width:240px; width:100%;" class="mobile-wrapper">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;" class="max-width">
-                                                    <tr class="mobile-hide">
-                                                        <td align="right" valign="bottom" style="background-color:#fff; padding-top:20px;" class="mobile-center darkmodeblack mb-padding-top">
-                                                            <p style="margin: 0;"><div class="g-img"><a target="_blank" href="https://deriv.com/academy/videos/?t=what-is-leverage%3F"><img src="https://static.deriv.com/images/leverage-video.png" border="0" class="mobile-center" style="max-width: 80%;"></a></div></p>
-                                                        </td>
-                                                    </tr>
-                                                    <div >
-                                                        <tr align="center" style="display: none; mso-hide:all;" class="mobile-visible-block">
-                                                            <td bgcolor="#fff" align="center" class="darkmodeblack" style="padding:5px 20px 20px">
-                                                                <a target="_blank" href="https://deriv.com/academy/videos/?t=what-is-leverage%3F"><input type="image" class="g-img mobile-center" src="https://static.deriv.com/images/leverage-video.png" width="100%" style="display: block;outline:none;margin: 0 auto;"/></a>
-                                                            </td>
-                                                        </tr>  
-                                                    </div>
-
-                                                </table>
-                                            </div>
-                                            <!--[if (gte mso 9)|(IE)]>
-                                            </td>
-                                            <td align="center" valign="middle">
-                                            <![endif]-->
-                                            <div style="display:inline-block; max-width:60%; min-width:260px; vertical-align:middle; width:100%;" class="mobile-wrapper darkmodeblack">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:360px;" class="max-width">
-                                                    <tr>
-                                                        <td align="left" valign="top" style="padding:30px 30px 10px; background-color: #fff; vertical-align: middle;" class="mobile-sideL mobile-align-center darkmodeblack mobile-low-top-padding">
-                                                            <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 15.3px; line-height: 1.5 ; color: #333333; font-weight: 400;margin: 0;" class="darkcolor-subtext"><span style="font-weight: 700;font-size: 31px;" class="darkcolor-subtext"><a target="_blank" href="https://deriv.com/academy/videos/?t=what-is-leverage%3F" style="color: #333" class="darkcolor-subtext mb-title-font">This month’s video</a></span><br>What is leverage?</p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-                </td>
-            </tr>
-            <!-- END CARD1 -->                       
-            <!-- CARD2 -->
-            <tr>
-                <td bgcolor="#eeeeee" align="center" style="padding: 0px; margin: 0">
-                    <!--[if (gte mso 9)|(IE)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="600"><tr><td align="center" valign="top" width="600"><![endif]-->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                        <!-- COPY 2 col -->
-                        <tr>
-                            <td bgcolor="#EAF4F5" align="center" style="padding: 20px 0;" class="mb-0padding-topdown darkmodetoolowblack">
-                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;" class="darkmodetoolowblack">
-                                    <tr>
-                                        <td align="center" valign="middle" style="background-color: #EAF4F5;font-size:0; padding: 0px;" class="darkmodetoolowblack">
-                                            <!--[if (gte mso 9)|(IE)]>
-                                            <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="margin: 0;">
-                                            <tr>
-                                            <td align="left" valign="middle">
-                                            <![endif]-->
-                                            <div style="display:none; max-width:50%; min-width:260px; width:100%;" class="mobile-wrapper mobile-visible">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px; mso-hide:all;" class="max-width">
-                                                    <tr align="center" style="display: none; mso-hide:all;" class="mobile-visible-block">
-                                                        <td bgcolor="#EAF4F5" align="center" style="padding:20px" class="darkmodetoolowblack">
-                                                            <input type="image" class="g-img mobile-center" src="https://static.deriv.com/email/images/design/report-jan.png" width="100%" style="display: block;outline:none;margin: 0 auto;"/>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>                                           
-                                            <div style=" display:inline-block; max-width:52%; min-width:260px; vertical-align:middle; width:100%;" class="mobile-wrapper">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;" class="max-width darkmodetoolowblack">
-                                                    <tr>
-                                                        <td align="center" valign="middle" style="padding: 10px 0 20px 65px;" class="mobile-sideL darkmodetoolowblack mobile-low-top-padding">
-                                                            <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 15.3px; line-height: 1.8 ; color: #333333; font-weight: 400;margin:0" class="darkcolor-subtext"><span style="font-weight: 700;font-size: 24px;color: #333333;" class="darkcolor-subtext">Market reports</span><br>Stay up-to-date with our weekly market reports. Read the latest report <a href="https://deriv.com/academy/blog/posts/the-weekly-market-report-21-02-2022-27-02-2022/" target="_blank" style="color: #ff444f !important">here</a>.</p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>                                           
-                                            <!--[if (gte mso 9)|(IE)]>
-                                            </td>
-                                            <td align="center" valign="middle">
-                                            <![endif]-->
-                                            <div style="background-color: #EAF4F5;vertical-align: middle; display:inline-block; max-width:48%; min-width:260px; width:100%;" class="darkmodetoolowblack mobile-wrapper mobile-hide">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;" class="max-width">
-                                                    <tr>
-                                                        <td align="left" valign="bottom" style="padding:0 0 0 15px;">
-                                                            <p style="margin: 0;"><div><img src="https://static.deriv.com/email/images/design/report-jan.png" border="0" class="mobile-negmargin g-img" style="max-width: 100%;"></div></p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-                </td>
-            </tr>
-            <!-- END CARD2 -->                                                      
+            </tr>   
+            <!-- End Email body-->                                                       
             <!-- FOOTER -->
             <tr>
                 <td bgcolor="#eeeeee" align="center" style="padding: 0 0 10px;" class="mobile-nopadding">
@@ -537,7 +363,7 @@
                                         <img src="https://static.deriv.com/email/images/icons/telegram.png" height="32" width="32" alt="Deriv.com on Telegram" title="Deriv.com on Telegram" />
                                     </a>&nbsp;&nbsp;
                                     <a href="https://www.youtube.com/c/Derivdotcom" style="text-decoration: none;">
-                                        <img src="https://static.deriv.com/email/images/icons/youtube.png"" height="32" width="32" alt="Deriv.com on Youtube" title="Deriv.com on Youtube" />
+                                        <img src="https://static.deriv.com/email/images/icons/youtube.png" height="32" width="32" alt="Deriv.com on Youtube" title="Deriv.com on Youtube" />
                                     </a>
                                 </p>
                             </td>
@@ -561,7 +387,6 @@
                     <![endif]-->
                 </td>
             </tr>
-            <!--End FOOTER -->
         </table>
     </body>
     <!-- end message template -->
