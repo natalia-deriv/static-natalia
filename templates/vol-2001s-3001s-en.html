@@ -325,6 +325,11 @@
                         </tr>
                         <!-- END HERO --> 
                         <tr>
+                            <td align="left" style="padding: 20px 30px 0 30px; background-color: #fff;" class="mobile-side darkmodeblack">
+                                <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #333333; font-weight: 400; margin: 0;" class="darkcolor-subtext">{% if customer.name != blank %} Hi {{customer.name | titlecase }}, {% else %} Hi, {% endif %}</p>
+                            </td>
+                        </tr>
+                        <tr>
                             <td align="left" style="padding: 25px 30px 0; background-color: #fff;" class="mobile-side darkmodeblack">
                                 <p style="font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 16px; line-height: 1.5 ; color: #333333; font-weight: 400;margin:0;" class="darkcolor-subtext">We’ve changed the trading settings for contracts with Volatility 200 (1s) and Volatility 300 (1s) to close-only.</p>
                             </td>
