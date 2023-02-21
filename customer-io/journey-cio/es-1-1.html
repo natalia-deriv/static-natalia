@@ -20,7 +20,7 @@
             <!-- Prevent iOS 11 from automatically scaling your email -->
             <meta name="x-apple-disable-message-reformatting"/>
         <!-- ==== END OF META TAGS ==== -->
-        <title>คุณได้รับเชิญให้เข้าร่วมสัมมนาออนไลน์สำหรับพันธมิตร Deriv!</title>
+        <title>Nuestra próxima gran expedición espera</title>
         <!-- ==== STYLES ==== -->
             <!-- Styles for Outlook: -->
                 <!--[if mso]>
@@ -32,10 +32,10 @@
                         .button:hover{ background-color: #d43e47; }
                         #ol-int-table, #ol-footer-table { width: 600px; background-color: #fff; padding: 0; border: 0; }
                         #ol-int-td { width: 600px; background-color: #fff; margin: 0; vertical-align: top; }
-                        .h-img-td input{ width: 90%; max-width: 520px; border-radius: 15px; }
+                        .h-img-td input{ width: 85%; max-width: 520px; border-radius: 15px; }
                         #title-td p{ margin: 0; color: #333; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 32px; font-weight: 700; line-height: 1.5; }
-                        #greeting-td p, .paragraph-td p{ margin: 0; color: #333; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; }
-                        .body-img{ width: 90%; max-width: 520px; display: block; outline: none; border-radius: 10px; }
+                        #greeting-td p, .paragraph-td p, #subtitle-td p{ margin: 0; color: #333; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; }
+                        .body-img{ width: 85%; max-width: 520px; display: block; outline: none; border-radius: 10px; }
                     </style>
                 <![endif]-->
             <!-- End of styles for Outlook: -->
@@ -112,6 +112,8 @@
                     text-align: left;
                     line-height: 24px;
                 }
+                #title-td{ padding: 15px 30px 0px 30px; }
+                #subtitle-td{ padding: 5px 30px 20px; }
                 /* iOS BLUE LINKS */
                 a[x-apple-data-detectors]{
                     color: inherit !important;
@@ -163,7 +165,7 @@
                     }
                     .h-img-td{ background-color: #fff; }
                     .h-img-td input{
-                        width: 90%;
+                        width: 85%;
                         border-radius: 15px;
                     }
                     #title-td p{
@@ -173,31 +175,29 @@
                         font-weight: 700;
                         line-height: 1.5;
                     }
-                    .list-ul{ padding: 0px 30px 0px 30px; }
-                    #greeting-td p, .paragraph-td p{
+                    .list-ul{ padding: 0px 30px 0px 40px; }
+                    #greeting-td p, .paragraph-td p, #subtitle-td p{
                         margin: 0;
-                        color: #333;
                         font-size: 16px;
                         font-weight: 400;
                         line-height: 1.5;
                     }
+                    #greeting-td p, .paragraph-td p{ color: #333; }
+                    #subtitle-td p{ color: #999; font-style: italic; }
                     .paragraph-td-discl p{
                         margin: 0;
-                        color: #999;
+                        color: #646464;
                         font-size: 12px;
                         font-weight: 400;
                         line-height: 1.5;
+                        padding: 20px 45px 0px;
                     }
                     .body-img{
-                        width: 90%;
+                        width: 85%;
                         display: block;
                         outline: none;
                         border-radius: 10px;
                     }
-                    .details-tb{ width: 90%; max-width: 540px; background-color: #333; margin: 0px 30px; border-radius: 10px;}
-                    .details-tb td{ color:#fff; font-size: 14px;}
-                    .details-speaker-td, .details-time-td{ width: 162px; }
-                    .details-date-td{ width: 216px; }
                     /* Table inside table */
                         .columns-2-ext-td{ width: 100%; padding: 0 50px 5px; }
                         .columns-2-a{ width: 71px; }
@@ -250,6 +250,9 @@
                         height: 12px;
                         display: block;
                     }
+                    .trustpilot-td{ padding: 40px 30px 30px; background-color: #ddd; }
+                    .trustpilot-widget a{ text-decoration: none; }
+                    .trustpilot-widget img{ border: 0; height: 18px; max-height: 18px; }
                 /* End of classes */
                 /* Mobile styles */
                     @media screen and (max-width: 620px){
@@ -268,9 +271,6 @@
                         .columns-2-b{ padding: 0px 10px 0px; vertical-align: middle; }
                         .columns-2-b-title{ font-size: 14px; font-weight: 550; }
                         .columns-2-b-text{ font-size: 13px; line-height: 1.5; }
-                        .details-tb{ width: 100% !important; margin: 0px !important; }
-                        .details-speaker-td, .details-date-td, .details-time-td, .details-tb .details-content-td{ padding: 10px 8px 0px 8px !important; }
-                        .details-tb td{ font-size: 13px;}
                         .mobile-hide{
                             /* Hide desktop content on mobile */
                             display: none !important;
@@ -285,16 +285,13 @@
                         }
                         .mb-title{
                             /* Applied on email title */
-                            font-size: 24px !important;
+                            font-size: 20px !important;
                         }
                         #greeting-td, .paragraph-td{
                             /* Decrease padding on mobile */
                             padding-left: 15px !important;
                             padding-right: 15px !important;
                         }
-                    }
-                    @media screen and (max-width: 480px){
-                        .details-tb td{ font-size: 12px;}
                     }
                 /* End of mobile styles */
                 /* Dark mode styles */
@@ -320,17 +317,12 @@
                             float: none !important;
                         }
                         /* Hides light mode-only content */
-                        .hide-dark-h-logo{ display: none !important; }
-                        .dark-hide{ display: none !important; }
-                        .dark-visible-block{ display: block !important; }
-                        .details-tb{ width: 90% !important; max-width: 540px !important; background-color: #c2c2c2 !important; margin: 0px 30px !important; border-radius: 10px !important;}
-                        .details-tb td{ color:#333 !important; }
-                        .details-speaker-td, .details-time-td{ width: 162px !important; }
-                        .details-date-td{ width: 216px !important; }
+                        .hide-dark-h-logo, .hide-light{ display: none !important; }
+                        .show-dark{ display: block !important; }
                         /* Applies dark background if dark mode is selected */
                         .dark-black{ background-color: #0e0e0e !important; }
                         /* Custom dark mode font colors */
-                        h1, h2, p, span, b{ color: #fff !important; }
+                        h1, h2, p, span, b, strong { color: #fff !important; }
                         .dark-gray{ color: #6e6e6e !important; }
                         .dark-subtext{ color: #c2c2c2 !important; }
                         .h-img-td{ background-color: #0e0e0e !important; }
@@ -382,113 +374,102 @@
                         </tr>
                         <tr class="mobile-hide">
                             <td class="h-img-td" align="center">
-                                <input type="image" src="https://static.deriv.com/email/images/header/red-cam-handshake-webinar.png"/>
+                                <input type="image" src="https://static.deriv.com/email/images/header/multiplier.png"/>
                             </td>
                         </tr> 
                         <tr style="display: none; mso-hide:all;" class="mb-visible-block">
                             <td class="h-img-td" align="center">
-                                <input type="image" src="https://static.deriv.com/email/images/header/red-cam-handshake-webinar-m.png"/>
+                                <input type="image" src="https://static.deriv.com/email/images/header-2023/red-car-white-m.png"/>
                             </td>
                         </tr>
                         <!-- END HERO -->
                         <tr>
                             <td id="title-td" align="center" style="padding: 15px 30px 20px 30px;" class="dark-black">
-                                <p class="dark-subtext mb-title">ยินดีต้อนรับ หุ้นส่วนใหม่! เรามีสัมมนาออนไลน์พิเศษที่รอให้คุณเข้าร่วมอยู่นะ!</p>
+                                <p class="dark-subtext mb-title">A toda máquina a<br/> nuestra siguiente aventura</p>
                             </td>
                         </tr>
                         <tr>
                             <td id="greeting-td" align="left" style="padding: 30px 30px 20px 30px;" class="dark-black">
                                 <p class="dark-subtext">{% if customer.name != blank %}
-สวัสดี {{customer.name | titlecase }},
+Hola, {{customer.name | titlecase }},
 {% else %}
-สวัสดี,
+Hola, trader,
 {% endif %}</p>
                             </td>
                         </tr>
                         <tr>
                             <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
-                                <p class="dark-subtext">เรามีความยินดีอย่างยิ่งที่คุณเข้าร่วมกับเรา! ตอนนี้คุณเป็นหุ้นส่วนพันธมิตรกับ Deriv อย่างเป็นทางการแล้วนะ และเราก็แทบจะรอไม่ไหวที่จะให้คุณเข้ามามีส่วนได้รับโอกาสอันน่าตื่นเต้นมากมายในอนาคตข้างหน้านี<br>ตอนนี้คุณสามารถทำรายได้เสริมผ่านช่องทางโปรแกรมพันธมิตรต่างๆ ที่หลากหลาย ของเราได้แล้ว และเพื่อเรียนรู้ข้อมูลเพิ่มเติม โปรดเข้าร่วมสัมมนาออนไลน์พิเศษที่จัดให้สำหรับหุ้นส่วนพันธมิตรใหม่ของเรา รายละเอียดงานสัมมนามีดังนี้:
-</p>
-                            </td>
-                        </tr>
-                        <tr class="dark-hide">
-                            <td align="center" width="600px">
-                                <table align="center" class="details-tb" style="width: 90%; max-width: 540px; background-color: #333; margin: 0px auto; border-radius: 10px;">
-                                    <tr>
-                                        <td class="details-speaker-td" style="padding: 40px 10px 20px 20px; font-weight: 700; color: #fff;">ผู้บรรยาย:</td>
-                                        <td class="details-date-td" style="padding: 40px 10px 20px 20px; font-weight: 700; color: #fff;">วันที่:</td>
-                                        <td class="details-time-td" style="padding: 40px 10px 20px 20px; font-weight: 700; color: #fff;">เวลา: </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-speaker-td" style="padding: 0 10px 40px 20px; color: #fff;">Ngu How Soon</td>
-                                        <td class="details-date-td" style="padding: 0 10px 40px 20px; color: #fff;">22nd February 2023 (วันพุธ)</td>
-                                        <td class="details-time-td" style="padding: 0 10px 40px 20px; color: #fff;">8:30PM BKT (1:30PM GMT)</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr style="display: none; mso-hide:all;" class="dark-visible-block">
-                            <td align="center" width="600px">
-                                <table align="center" class="details-tb" style="width: 90%; max-width: 540px; background-color: #c2c2c2; margin: 0px auto; border-radius: 10px;">
-                                    <tr style="display: none; mso-hide:all;" class="dark-visible-block">
-                                        <td class="details-speaker-td" style="padding: 40px 10px 20px 20px; font-weight: 700; color: #333;">ผู้บรรยาย:</td>
-                                        <td class="details-date-td" style="padding: 40px 10px 20px 20px; font-weight: 700; color: #333;">วันที่:</td>
-                                        <td class="details-time-td" style="padding: 40px 10px 20px 20px; font-weight: 700; color: #333;">เวลา: </td>
-                                    </tr>
-                                    <tr style="display: none; mso-hide:all;" class="dark-visible-block">
-                                        <td class="details-speaker-td" style="padding: 0 10px 40px 20px; color: #333;">Ngu How Soon</td>
-                                        <td class="details-date-td" style="padding: 0 10px 40px 20px; color: #333;">22nd February 2023 (วันพุธ)</td>
-                                        <td class="details-time-td" style="padding: 0 10px 40px 20px; color: #333;">8:30PM BKT (1:30PM GMT)</td>
-                                    </tr>
-                                </table>
+                                <p class="dark-subtext">Nos entusiasma compartir que Deriv patrocina este año un equipo en el 4L Trophy, la mayor carrera humanitaria de estudiantes de Europa.</p>
                             </td>
                         </tr>
                         <tr>
-                            <td class="paragraph-td" align="left" style="padding: 30px 30px 0px 30px;" class="dark-black">
-                                <p class="dark-subtext">ในงานสัมมนานี้ เราจะแบ่งปันข้อมูลต่างๆ ให้กับคุณดังนี้:
-</p>
+                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">Del 15 al 26 de febrero, nuestros conductores, Team C&C, se unirán a más de 1.500 dúos en un viaje lleno de retos durante 6.500 kms de Francia a Marruecos, atravesando dunas, desiertos y terreno abrupto. También entregarán material educativo a escuelas para niños desfavorecidos en el desierto de Marruecos por el camino.</p>
                             </td>
                         </tr>
                         <tr>
-                            <td align="left" class="list-ul dark-black">
-                                <ul>
-                                    <li class="dark-subtext">บทแนะนำองค์กร Deriv</li>
-                                    <li class="dark-subtext">โปรแกรมพันธมิตรที่หลากหลาย  </li>
-                                    <li class="dark-subtext">การคำนวณอัตราค่าคอมมิชชั่น</li>
-                                    <li class="dark-subtext">คำแนะนำแบบทีละขั้นตอนเกี่ยวกับการใช้งานหน้ากระดานเวปพันธมิตร </li>
-                                    <li class="dark-subtext">แนวทางการโปรโมท Deriv</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="paragraph-td" align="left" style="padding: 10px 30px 30px 30px;" class="dark-black">
-                                <p class="dark-subtext">อย่าได้พลาดโอกาสทองนี้เลย จองที่นั่งเข้าร่วมสัมมนาด้วยการลงทะเบียนได้เลยวันนี้!</p>
+                            <td class="paragraph-td" align="left" style="padding: 0px 30px 40px 30px;" class="dark-black">
+                                <p class="dark-subtext">Únete a nosotros siguiendo toda la acción en nuestro blog y páginas oficiales en redes. ¡Abróchate el cinturón para un viaje épico!</p>
                             </td>
                         </tr>
                         <tr>
                             <td align="center" class="dark-black">
                                 <!--[if (gte mso 9)|(IE)]>
-                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://deriv.zoom.us/webinar/register/WN_OMg5mvHBQmaBq4mzamHkIg" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="10%" strokecolor="#ff444f" fillcolor="#ff444f">
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://deriv.link/3HXr7GR" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="10%" strokecolor="#ff444f" fillcolor="#ff444f">
                                 <w:anchorlock/>
-                                <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">ลงทะเบียนตอนนี้</center>
+                                <center style="color:#fff;font-family:sans-serif;font-size:16px;font-weight:bold;">Únete a la aventura</center>
                                 </v:roundrect>
                                 <![endif]-->
                                 <!--[if !gte mso 9]><!-- -->
-                                <a class="button" href="https://deriv.zoom.us/webinar/register/WN_OMg5mvHBQmaBq4mzamHkIg" target="_blank">ลงทะเบียนตอนนี้</a>
+                                <a class="button" href="https://deriv.link/3HXr7GR" target="_blank">Únete a la aventura</a>
                                 <!--<![endif]-->
                             </td>
                         </tr>
                         <tr>
-                            <td class="paragraph-td" align="left" style="padding: 30px 30px 40px 30px;" class="dark-black">
-                                <p class="dark-subtext">หากคุณมีคำถามหรือข้อกังวลใดๆ โปรดติดต่อเราผ่านทาง <a href="https://deriv.com/?is_livechat_open=true">แชทสด</a></p>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">This email is a marketing email intended for retail and professional clients and has been issued by Deriv Investments (Europe) Limited with the registered address: W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">Deriv Investments (Europe) Limited is licensed in Malta and regulated by the Malta Financial Services Authority under the Investment Services Act, to provide investment services in the European Union.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">This email is a marketing email intended for retail and professional clients and has been issued by Deriv Investments (Europe) Limited with the registered address: W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">Deriv Investments (Europe) Limited is authorised to deal on its own account and is both the manufacturer and distributor of its products.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">The products offered by Deriv Investments (Europe) Limited, including CFDs are classed as 'complex products' and may not be suitable for retail clients.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">CFDs are complex instruments with a high risk of losing money rapidly due to leverage.<br>71% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">We will never share our email lists and other data with a third party. To learn more about how we protect your personal and financial information, please read our security and privacy policy.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td-discl" align="left" class="dark-black">
+                                <p class="dark-subtext">CFDs are complex instruments with a high risk of losing money rapidly due to leverage.<br>71% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
                             </td>
                         </tr>
                     </table>
                     <!--[if (gte mso 9)|(IE)]></td></tr></table>
                     <![endif]-->
                 </td>
-            </tr>
-            
+            </tr>   
             <!-- End Email body-->
             <!-- FOOTER -->
             <tr>
@@ -500,32 +481,26 @@
                         <!-- SOCIAL -->
                         <tr>
                             <td id="footer-social-td" align="center" class="dark-black">
-                                <a href="https://twitter.com/derivdotcom" target="_blank">
+                                <a href="https://twitter.com/deriv_eu/" target="_blank">
                                     <img src="https://static.deriv.com/email/images/icons/twitter.png" alt="Deriv.com on Twitter" title="Deriv.com on Twitter"/>
                                 </a>&nbsp;&nbsp;
-                                <a href="https://www.facebook.com/derivdotcom" target="_blank">
+                                <a href="https://www.facebook.com/DerivEU/" target="_blank">
                                     <img src="https://static.deriv.com/email/images/icons/facebook.png" alt="Deriv.com on Facebook" title="Deriv.com on Facebook"/>
                                 </a>&nbsp;&nbsp;
-                                <a href="https://www.instagram.com/deriv_official/" target="_blank">
+                                <a href="https://instagram.com/deriv_eu/" target="_blank">
                                     <img src="https://static.deriv.com/email/images/icons/instagram.png" alt="Deriv.com on Instagram" title="Deriv.com on Instagram"/>
-                                </a>&nbsp;&nbsp;
-                                <a href="https://t.me/derivdotcomofficial" target="_blank">
-                                    <img src="https://static.deriv.com/email/images/icons/telegram.png" alt="Deriv.com on Telegram" title="Deriv.com on Telegram"/>
-                                </a>&nbsp;&nbsp;
-                                <a href="https://www.youtube.com/c/Derivdotcom" target="_blank">
-                                    <img src="https://static.deriv.com/email/images/icons/youtube.png" alt="Deriv.com on Youtube" title="Deriv.com on Youtube"/>
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td id="footer-links-td" align="center" class="dark-black">
-                                <p><a href="https://deriv.com/th/help-centre/">ศูนย์ช่วยเหลือ</a>&nbsp;&nbsp;&nbsp;<span class="dark-gray">|</span>&nbsp;&nbsp;&nbsp;<a href="https://deriv.com/th/terms-and-conditions">ข้อตกลงและเงื่อนไข</a>&nbsp;&nbsp;&nbsp;<span class="dark-gray">|</span>&nbsp;&nbsp;&nbsp;<a href="https://deriv.com/tnc/security-and-privacy.pdf">ความปลอดภัยและความเป็นส่วนตัว</a></p>
-                                <p id="unsubscribe-p" class="dark-gray dark-subtext">ไม่ต้องการรับอีเมล์เหล่านี้อีกต่อไป? <a href="https://app.deriv.com/account/personal-details">ยกเลิกการสมัคร</a></p>
+                                <p><a href="https://eu.deriv.com/es/help-centre/">Centro de ayuda</a>&nbsp;&nbsp;&nbsp;<span class="dark-gray">|</span>&nbsp;&nbsp;&nbsp;<a href="https://eu.deriv.com/es/terms-and-conditions/#clients">Términos y condiciones</a>&nbsp;&nbsp;&nbsp;<span class="dark-gray">|</span>&nbsp;&nbsp;&nbsp;<a href="https://eu.deriv.com/tnc/security-and-privacy.pdf">Seguridad y privacidad</a></p>
+                                <p id="unsubscribe-p" class="dark-gray dark-subtext">¿Ya no desea recibir estos e-mails? <a href="https://app.deriv.com/account/personal-details">Darse de baja</a></p>
                             </td>
-                        </tr>
+                        </tr>                        
                         <tr>
                             <td id="f-logo" align="center" class="dark-black">
-                                <a href="https://www.deriv.com">
+                                <a href="https://eu.deriv.com">
                                     <img src="https://static.deriv.com/logos/deriv-gray.png" alt="Deriv.com" title="Deriv.com">                                   
                                 </a>
                             </td>
