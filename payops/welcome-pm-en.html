@@ -192,19 +192,28 @@
                         line-height: 1.5;
                     }
                     .body-img{
-                        width: 85%;
+                        width: 170px;
                         display: block;
                         outline: none;
-                        border-radius: 10px;
+                    }
+                    .steps-width{
+                        width: 33%;
+                        padding: 7px;
                     }
                     /* Table inside table */
-                        .columns-2-ext-td{ width: 100%; padding: 0 50px 5px; }
+                        .columns-2-ext-td{
+                            width: 100%; padding: 0 50px 5px;
+                            background-color: #FAFBFD;
+                        }
                         .columns-2-a{ width: 71px; }
                         .columns-2-a img{ margin: auto !important; border: 0; display: block; }
                         .columns-2-b{ padding: 0px 20px 0px; vertical-align: middle; }
                         .columns-2-b-title{ font-size: 16px; font-weight: 550; line-height: 1; }
                         .columns-2-b-text{ font-size: 14px; line-height: 1.8; font-weight: 400; }
                         .no-padding-td p{ margin: 7px; }
+                        .gray-line{
+                            border-bottom: 3px solid #E8EDF3;
+                        }
                     /* End of table inside table */
                     #footer-table{
                         width: 100%;
@@ -264,9 +273,12 @@
                             margin-top: 0px !important;
                         }
                         .list-ul{ padding: 0px 10px 0px 15px; }
-                        .columns-2-ext-td{ width: 100%; padding: 0 10px 5px; }
+                        .columns-2-ext-td{
+                            width: 100%; padding: 0 10px 5px;
+                            background-color: #FAFBFD;
+                        }
                         .columns-2-a{ width: 50px; }
-                        .columns-2-a img{ width: 60px; margin: auto !important; }
+                        .columns-2-a img{ width: 130px; margin: auto !important; }
                         .columns-2-b{ padding: 0px 10px 0px; vertical-align: middle; }
                         .columns-2-b-title{ font-size: 14px; font-weight: 550; }
                         .columns-2-b-text{ font-size: 13px; line-height: 1.5; }
@@ -392,18 +404,36 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                            <td class="paragraph-td" align="center" style="padding: 0px 30px 20px 30px;" class="dark-black">
                                 <p class="dark-subtext">Your Deriv USD account is ready.</p>
                             </td>
                         </tr>
                         <tr>
-                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                            <td class="paragraph-td" align="center" style="padding: 0px 30px 20px 30px;" class="dark-black">
                                 <p class="dark-subtext">Your account number is CR1234567.</p>
                             </td>
                         </tr>
                         <tr>
-                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                            <td class="paragraph-td" align="center" style="padding: 0px 30px 20px 30px;" class="dark-black">
                                 <p class="dark-subtext">Fund your account via the Deriv cashier and start trading for real</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="dark-black" style="padding: 0px 30px 20px;">
+                                <!--[if (gte mso 9)|(IE)]>
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="10%" strokecolor="#ff444f" fillcolor="#ff444f">
+                                <w:anchorlock/>
+                                <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">Take me to the Cashier</center>
+                                </v:roundrect>
+                                <![endif]-->
+                                <!--[if !gte mso 9]><!-- -->
+                                <a class="button" href="#" target="_blank" style="background: #ff444f; padding: 10px 16px; border: 0; border-radius: 4px; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 14px; color: #fff !important; font-weight: bold; text-decoration: none; text-align: center; line-height: 20px; display: inline-block; overflow: visible;" onmouseover="this.style.backgroundColor='#d43e47'" onmouseout="this.style.backgroundColor='#ff444f'">Take me to the Cashier</a>
+                                <!--<![endif]-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td" align="center" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">Payment methods available in Nigeria</p>
                             </td>
                         </tr>
                         <tr>
@@ -411,21 +441,161 @@
                                 <table align="left">
                                     <tr> 
                                         <td class="no-padding-td columns-2-a dark-black">
-                                            <img src="https://static.deriv.com/email/images/design-2023/perfect-money-m.png" width="100px">
+                                            <img src="https://static.deriv.com/email/images/design-2023/perfect-money-m.png" width="132px">
                                         </td>
                                         <td class="columns-2-b dark-black">
                                             <table class="dark-black">
                                                 <tr> 
-                                                    <td class="no-padding-td">
-                                                        <p class="columns-2-b-text dark-subtext">Perfect Money</p>
+                                                    <td class="no-padding-td gray-line">
+                                                        <p class="columns-2-b-text dark-subtext"><strong>Perfect Money</strong></p>
                                                         <p class="columns-2-b-text dark-subtext">Make instant deposits using your e-wallet.</p>
                                                         <p class="columns-2-b-text dark-subtext">Deposit: Instant.</p>
                                                     </td>
-                                                    <td class="no-padding-td">
+                                                    <td class="no-padding-td" width="90px">
                                                         <p class="columns-2-b-text dark-subtext"><a href="https://app.deriv.com/cashier/deposit" style="color:#ff444f !important;">Fund now <img src="https://static.deriv.com/email/images/marketing/real-acc/2-pink.png" width="8" height="8" border="0" style="max-width: 100%;" alt="Deriv.com"></a></p>
                                                     </td>
                                                 </tr>
                                             </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="columns-2-ext-td dark-black">
+                                <table align="left">
+                                    <tr> 
+                                        <td class="no-padding-td columns-2-a dark-black">
+                                            <img src="https://static.deriv.com/email/images/design-2023/astropay2023-m.png" width="132px">
+                                        </td>
+                                        <td class="columns-2-b dark-black">
+                                            <table class="dark-black">
+                                                <tr> 
+                                                    <td class="no-padding-td gray-line">
+                                                        <p class="columns-2-b-text dark-subtext"><strong>AstroPay</strong></p>
+                                                        <p class="columns-2-b-text dark-subtext">Make instant deposits using your e-wallet.</p>
+                                                        <p class="columns-2-b-text dark-subtext">Deposit: Instant.</p>
+                                                    </td>
+                                                    <td class="no-padding-td" width="90px">
+                                                        <p class="columns-2-b-text dark-subtext"><a href="https://app.deriv.com/cashier/deposit" style="color:#ff444f !important;">Fund now <img src="https://static.deriv.com/email/images/marketing/real-acc/2-pink.png" width="8" height="8" border="0" style="max-width: 100%;" alt="Deriv.com"></a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="columns-2-ext-td dark-black">
+                                <table align="left">
+                                    <tr> 
+                                        <td class="no-padding-td columns-2-a dark-black">
+                                            <img src="https://static.deriv.com/email/images/design-2023/chipper-m.png" width="132px">
+                                        </td>
+                                        <td class="columns-2-b dark-black">
+                                            <table class="dark-black">
+                                                <tr> 
+                                                    <td class="no-padding-td gray-line">
+                                                        <p class="columns-2-b-text dark-subtext"><strong>Chippercash</strong></p>
+                                                        <p class="columns-2-b-text dark-subtext">Make instant deposits using your e-wallet.</p>
+                                                        <p class="columns-2-b-text dark-subtext">Deposit: Instant.</p>
+                                                    </td>
+                                                    <td class="no-padding-td" width="90px">
+                                                        <p class="columns-2-b-text dark-subtext"><a href="https://app.deriv.com/cashier/deposit" style="color:#ff444f !important;">Fund now <img src="https://static.deriv.com/email/images/marketing/real-acc/2-pink.png" width="8" height="8" border="0" style="max-width: 100%;" alt="Deriv.com"></a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="columns-2-ext-td dark-black">
+                                <table align="left">
+                                    <tr> 
+                                        <td class="no-padding-td columns-2-a dark-black">
+                                            <img src="https://static.deriv.com/email/images/design-2023/mifinity-m.png" width="132px">
+                                        </td>
+                                        <td class="columns-2-b dark-black">
+                                            <table class="dark-black">
+                                                <tr> 
+                                                    <td class="no-padding-td gray-line">
+                                                        <p class="columns-2-b-text dark-subtext"><strong>MiFinity</strong></p>
+                                                        <p class="columns-2-b-text dark-subtext">Make instant deposits using your e-wallet.</p>
+                                                        <p class="columns-2-b-text dark-subtext">Deposit: Instant.</p>
+                                                    </td>
+                                                    <td class="no-padding-td" width="90px">
+                                                        <p class="columns-2-b-text dark-subtext"><a href="https://app.deriv.com/cashier/deposit" style="color:#ff444f !important;">Fund now <img src="https://static.deriv.com/email/images/marketing/real-acc/2-pink.png" width="8" height="8" border="0" style="max-width: 100%;" alt="Deriv.com"></a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="columns-2-ext-td dark-black">
+                                <table align="left">
+                                    <tr> 
+                                        <td class="no-padding-td columns-2-a dark-black">
+                                            <img src="https://static.deriv.com/email/images/design-2023/sticpay-m.png" width="132px">
+                                        </td>
+                                        <td class="columns-2-b dark-black">
+                                            <table class="dark-black">
+                                                <tr> 
+                                                    <td class="no-padding-td gray-line">
+                                                        <p class="columns-2-b-text dark-subtext"><strong>STICPAY</strong></p>
+                                                        <p class="columns-2-b-text dark-subtext">Make instant deposits using your e-wallet.</p>
+                                                        <p class="columns-2-b-text dark-subtext">Deposit: Instant.</p>
+                                                    </td>
+                                                    <td class="no-padding-td" width="90px">
+                                                        <p class="columns-2-b-text dark-subtext"><a href="https://app.deriv.com/cashier/deposit" style="color:#ff444f !important;">Fund now <img src="https://static.deriv.com/email/images/marketing/real-acc/2-pink.png" width="8" height="8" border="0" style="max-width: 100%;" alt="Deriv.com"></a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="columns-2-ext-td dark-black" style="padding: 10px 0px; border: 0";>
+                                <!--[if (gte mso 9)|(IE)]>
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://app.deriv.com/cashier/deposit" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="10%" strokecolor="#ff444f" fillcolor="#ff444f">
+                                <w:anchorlock/>
+                                <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">View all payment options</center>
+                                </v:roundrect>
+                                <![endif]-->
+                                <!--[if !gte mso 9]><!-- -->
+                                <a class="button" href="https://app.deriv.com/cashier/deposit" target="_blank" style="background: #ff444f; padding: 10px 16px; border: 0; border-radius: 4px; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 14px; color: #fff !important; font-weight: bold; text-decoration: none; text-align: center; line-height: 20px; display: inline-block; overflow: visible;" onmouseover="this.style.backgroundColor='#d43e47'" onmouseout="this.style.backgroundColor='#ff444f'">View all payment options</a>
+                                <!--<![endif]-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="title-td" align="center" style="padding: 15px 50px 20px;" class="dark-black">
+                                <h2 class="dark-subtext mb-title">How to fund your account in 3 easy steps</h2>
+                            </td>
+                        </tr>
+                        tr>
+                            <td id="title-td" align="center" style="padding: 15px 50px 20px;" class="dark-black">
+                                <h2 class="dark-subtext mb-title">How to fund your account in 3 easy steps</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <table>
+                                    <tr>
+                                        <td align="center"  class="dark-black steps-width">
+                                            <input class="body-img" type="image" src="https://static.deriv.com/email/images/deriv-2023/step1en-m.png"/>
+                                        </td>
+                                        <td align="center"  class="dark-black steps-width">
+                                            <input class="body-img" type="image" src="https://static.deriv.com/email/images/deriv-2023/step2en-m.png"/>
+                                        </td>
+                                        <td align="center"  class="dark-black steps-width">
+                                            <input class="body-img" type="image" src="https://static.deriv.com/email/images/deriv-2023/step3en-m.png"/>
                                         </td>
                                     </tr>
                                 </table>
