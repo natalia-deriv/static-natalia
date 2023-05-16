@@ -1,0 +1,36 @@
+                        {% if event.latest_poi_by %}
+                        <tr>
+                            <td class="greeting-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">
+                                    {% if event.latest_poi_by == 'idv'%}
+                                        Only for your non EU accounts.
+                                    {% else %}
+                                        For both your EU and non EU accounts.
+                                    {% endif %}
+                                </p>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">Thank you for verifying your address and identity. You can now trade, make deposits, and withdraw your funds without interruption.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="dark-black">
+                                <!--[if (gte mso 9)|(IE)]>
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://app.deriv.com" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="30%" strokecolor="#ff444f" fillcolor="#ff444f">
+                                <w:anchorlock/>
+                                <center style="color:#fff;font-family:sans-serif;font-size:14px;font-weight:bold;">Great, take me to Deriv</center>
+                                </v:roundrect>
+                                <![endif]-->
+                                <!--[if !gte mso 9]><!-- -->
+                                <a class="button" href="https://app.deriv.com" target="_blank">Great, take me to Deriv</a>
+                                <!--<![endif]-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td" align="left" style="padding: 30px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">Need help? <a href="{{event.live_chat_url}}" target="_blank">Contact us</a> via live chat.</p>
+                            </td>
+                        </tr>
