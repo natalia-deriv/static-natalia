@@ -411,40 +411,61 @@
                                 <!--<![endif]-->
                             </td>
                         </tr>
-                        {% if event.latest_poi_by %}
                         <tr>
-                            <td class="greeting-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
-                                <p class="dark-subtext">
-                                    {% if event.latest_poi_by == 'idv'%}
-                                        Only for your non EU accounts.
-                                    {% else %}
-                                        For both your EU and non EU accounts.
-                                    {% endif %}
-                                </p>
+                            <td id="title-text-td">
+                                <p class="dark-subtext">{% if {{event.first_name}} != blank % %} Hello  {{event.first_name | titlecase}}!
+                                    {% else %} Hello!
+                                {% endif %}</p>
                             </td>
                         </tr>
-                        {% endif %}
+                        <tr>
+                            <td class="greeting-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <h1 class="dark-subtext">Your Deriv X 
+                                    {% if {{event.account_type}} contains 'demo' %} demo
+                                        {% else %} real
+                                    {% endif %} account is ready</h1>  
+                            </td>
+                        </tr>
                         <tr>
                             <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
-                                <p class="dark-subtext">Thank you for verifying your address and identity. You can now trade, make deposits, and withdraw your funds without interruption.</p>
+                                <p class="dark-subtext">You can now trade with your Deriv X {% if {{event.account_type}} contains 'demo' %} demo
+                                    {% else %} real
+                                {% endif %} account.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">Your username for the Deriv X platform is <strong>{{event.login}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">Your Deriv X {% if {{event.account_type}} contains 'demo' %} demo
+                                    {% else %} real
+                                {% endif %} account ID is <strong>{{event.account_id}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="paragraph-td" align="left" style="padding: 0px 30px 20px 30px;" class="dark-black">
+                                <p class="dark-subtext">To start trading, head to the Deriv X dashboard.</p>
                             </td>
                         </tr>
                         <tr>
                             <td align="center" class="dark-black">
                                 <!--[if (gte mso 9)|(IE)]>
-                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://app.deriv.com" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="30%" strokecolor="#ff444f" fillcolor="#ff444f">
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://app.deriv.com/derivx" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="30%" strokecolor="#ff444f" fillcolor="#ff444f">
                                 <w:anchorlock/>
-                                <center style="color:#fff;font-family:sans-serif;font-size:14px;font-weight:bold;">Great, take me to Deriv</center>
+                                <center style="color:#fff;font-family:sans-serif;font-size:14px;font-weight:bold;">Go to Deriv X dashboard</center>
                                 </v:roundrect>
                                 <![endif]-->
                                 <!--[if !gte mso 9]><!-- -->
-                                <a class="button" href="https://app.deriv.com" target="_blank">Great, take me to Deriv</a>
+                                <a class="button" href="https://app.deriv.com/derivx" target="_blank">Go to Deriv X dashboard</a>
                                 <!--<![endif]-->
                             </td>
                         </tr>
                         <tr>
                             <td class="paragraph-td" align="left" style="padding: 30px 30px 20px 30px;" class="dark-black">
-                                <p class="dark-subtext">Need help? <a href="{{event.live_chat_url}}" target="_blank">Contact us</a> via live chat.</p>
+                                <p class="dark-subtext">Need help? <a href="https://deriv.com/help-centre" target="_blank">Contact us</a> via live chat.</p>
                             </td>
                         </tr>
             <!-- End Email body-->

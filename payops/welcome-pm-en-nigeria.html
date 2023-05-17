@@ -19,19 +19,36 @@
 
             <!-- Prevent iOS 11 from automatically scaling your email -->
             <meta name="x-apple-disable-message-reformatting"/>
+
+            <!-- FONTS: -->
+            <!-- Ubuntu 400: -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+            <!-- Ubuntu 500: -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+            <!-- Ubuntu 700: -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
         <!-- ==== END OF META TAGS ==== -->
         <title>Your new USD account has been created</title>
         <!-- ==== STYLES ==== -->
             <!-- Styles for Outlook: -->
                 <!--[if mso]>
                     <style type="text/css">
-                        *, a, p, h1, h2, h3, td { font-family: Arial, sans-serif; }
+                        *, a, p, h1, h2, h3, td { font-family: 'Ubuntu', IBM Plex Sans, Arial, sans-serif; }
                         table { border-collapse: collapse; }
                         a, a:visited { color: #ff444f !important; text-decoration: none; }
                         a.button{ padding: 10px 16px; color: #fff !important; border: 0; border-radius: 4px; font-size: 14px; text-decoration: none; text-align: center; }
                         .button:hover{ background-color: #d43e47; }
                         #ol-int-table, #ol-footer-table { width: 600px; background-color: #fff; padding: 0; border: 0; }
                         #ol-int-td { width: 600px; background-color: #fff; margin: 0; vertical-align: top; }
+                        #ol-title-img-tb{ width: 600px; }
+                        #ol-logo-img-td{ background-color:#ff444f; width: 300px; height: 55px; }
                         .h-img-td input{ width: 85%; max-width: 520px; border-radius: 15px; }
                         #title-td p{ margin: 0; color: #333; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 32px; font-weight: 700; line-height: 1.5; }
                         #greeting-td p, .paragraph-td p, #subtitle-td p{ margin: 0; color: #333; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; }
@@ -71,7 +88,7 @@
                     }
                 }
                 /* Applied to all tags */
-                *{ font-family: 'IBM Plex Sans', Arial, sans-serif; color: #333; }
+                *{ font-family: 'Ubuntu', Arial, sans-serif; color: #414652; }
                 body{
                     width: 100%;
                     height: 100%;
@@ -138,7 +155,7 @@
                         background: #ff444f;
                         padding: 10px 16px;
                         border: 0;
-                        border-radius: 4px;
+                        border-radius: 15px;
                         font-size: 14px;
                         color: #fff !important;
                         font-weight: bold;
@@ -153,7 +170,7 @@
                         padding: 10px 16px;
                         border: 0;
                         border: 2px solid #999999;
-                        border-radius: 4px;
+                        border-radius: 15px;
                         font-size: 14px;
                         color: #333;
                         text-decoration: none;
@@ -179,6 +196,13 @@
                         border:0;
                         border-spacing: 0px;
                     }
+                    #header-td{ width: 600px; margin: 0; padding: 0; }
+                    #title-img-tb, #logo-title-tb{ width: 100%; height: 100%; margin: 0; }
+                    .top-right-td{ height: 180px; max-height: 180px; background-image: linear-gradient(#ff444f,#ff444f); background-color: #ff444f; }
+                    #image-title-td{ width: 55%; height: 180px; margin:0; padding:0; vertical-align: top;}
+                    #image-title-td img{ width: 100%; max-width: 360px; height: 180px; object-fit: cover; object-position: 0 100%;}
+                    .logo-img-td{ width: 45%; vertical-align: top;}
+                    .logo-img-td img{ width: 58px; padding: 15px 0 0 15px; }
                     #h-logo-td{ padding: 30px 0px 15px 0px; }
                     #h-logo-black, #h-logo-white{
                         width: 100px;
@@ -191,6 +215,8 @@
                         width: 85%;
                         border-radius: 15px;
                     }
+                    #title-text-td{ height: 100%; vertical-align: top; }
+                    #title-text-td h1{ padding: 10px 15px; margin-top: 15px; color: #fff; font-size: 25px; font-weight: 700; text-align: center;}
                     #title-td p{
                         margin: 0;
                         color: #333;
@@ -201,11 +227,14 @@
                     .list-ul{ padding: 0px 30px 0px 40px; }
                     #client-td p, #account-td p, .paragraph-td p, #subtitle-td p{
                         margin: 0;
+                        font-family: 'IBM Plex Sans';
                         font-size: 16px;
                         font-weight: 400;
                         line-height: 1.5;
                     }
-                    #client-td p, #account-td p, .paragraph-td p{ color: #333; }
+                    #client-td p, #account-td p, .paragraph-td p{ 
+                        font-family: 'IBM Plex Sans';
+                        color: #333; }
                     #subtitle-td p{ color: #999; font-style: italic; }
                     .paragraph-td-discl p{
                         margin: 0;
@@ -243,10 +272,10 @@
                     .payment-td-icon img{ width: 80px; text-align: center; margin: auto;}
                     .payment-td-desc{ padding: 5px 0px 0px 5px; }
                     .payment-td-link{ width: 20%; max-width: 80px; font-size: 14px; padding-left: 15px; vertical-align: middle;}
-                    .payment-name-td{ font-size: 16px; font-weight: 600; line-height: 24px; padding-bottom: 8px; }
-                    .payment-desc-td{ font-size: 14px; line-height: 21px; padding-bottom: 8px; }
-                    .payment-desc-td{ font-size: 14px; line-height: 21px; padding-bottom: 8px; }
-                    .payment-limits-td{ color: #999; font-size: 12px; line-height: 18px; padding-bottom: 8px; }
+                    .payment-name-td{ font-family: 'IBM Plex Sans'; font-size: 16px; font-weight: 600; line-height: 24px; padding-bottom: 8px; }
+                    .payment-desc-td{ font-family: 'IBM Plex Sans'; font-size: 14px; line-height: 21px; padding-bottom: 8px; }
+                    .payment-desc-td{ font-family: 'IBM Plex Sans'; font-size: 14px; line-height: 21px; padding-bottom: 8px; }
+                    .payment-limits-td{ font-family: 'IBM Plex Sans'; color: #999; font-size: 12px; line-height: 18px; padding-bottom: 8px; }
                     .dark-logo-padding{ margin: auto; }
                     /* Table inside table */
                         .columns-2-ext-td{ width: 100%; padding: 0 50px 5px; }
@@ -306,6 +335,11 @@
                 /* End of classes */
                 /* Mobile styles */
                     @media screen and (max-width: 620px){
+                        #header-td{ max-width: 600px; }
+                        #header-td, #title-img-tb, #title-img-tb td, #logo-title-tb, .logo-img-td{ margin: 0; padding: 0;}
+                        #image-title-td{ width: 50% !important; }
+                        #image-title-td, .top-right-td{ height: 180px; max-height: 180px; }
+                        #image-title-td img{ object-fit: cover;}
                         #h-logo-td{ padding: 10px 0; }
                         #h-logo-black{
                             width: 70px !important;
@@ -314,6 +348,7 @@
                             max-height: 13px !important;
                             margin-top: 0px !important;
                         }
+                        .logo-img-td img{ width: 50px !important; padding: 20px 0 0 20px; }
                         .list-ul{ padding: 0px 10px 0px 15px; }
                         .columns-2-ext-td{ width: 100%; padding: 0 10px 5px; }
                         .columns-2-a{ width: 50px; }
@@ -343,15 +378,27 @@
                             padding-left: 15px !important;
                             padding-right: 15px !important;
                         }
-                        #client-td p, #account-td p, .paragraph-td p, #subtitle-td p{ font-size: 14px; }
+                        #client-td p, #account-td p, .paragraph-td p, #subtitle-td p{
+                            font-family: 'IBM Plex Sans';
+                            font-size: 14px;
+                        }
                         .item-tb-mb{ width: 100% !important; }
                         .payments-td, .payments-session-td{padding-top: 5px; padding-bottom: 15px;}
                         .payment-td-icon{ width: 100%; max-height: 20px;}
                         .payment-td-icon img{ width: 120px; padding-top: 30px;}
-                        .payment-name-td{ font-size: 14px; line-height: 21px;}
-                        .payment-desc-td{ font-size: 12px; line-height: 18px;}
-                        .payment-limits-td{ color: #999; font-size: 10px; line-height: 15px;}
-                        .payment-link-td{ width: 100%; text-align: center; font-size: 14px; line-height: 21px; padding: 15px 0 10px;}
+                        .payment-name-td{ font-family: 'IBM Plex Sans'; font-size: 14px; line-height: 21px;}
+                        .payment-desc-td{ font-family: 'IBM Plex Sans'; font-size: 12px; line-height: 18px;}
+                        .payment-limits-td{ font-family: 'IBM Plex Sans'; color: #999; font-size: 10px; line-height: 15px;}
+                        .payment-link-td{ font-family: 'IBM Plex Sans'; width: 100%; text-align: center; font-size: 14px; line-height: 21px; padding: 15px 0 10px;}
+                    }
+                    @media screen and (max-width: 460px){
+                        .logo-img-td img{ width: 40px !important; padding: 15px 0 0 15px; }
+                        #title-text-td h1{ padding: 10px 10px 10px 15px; margin-top: 5px; font-size: 18px; font-weight: 600; }
+                        #image-title-td{ width: 40%; height: 160px; vertical-align: top;}
+                        #image-title-td img{ height: 180px; }
+                    }
+                    @media screen and (max-width: 380px){ 
+                        #title-text-td h1{ font-size: 16px; }
                     }
                 /* End of mobile styles */
                 /* Dark mode styles */
@@ -432,33 +479,65 @@
                     <table id="int-table" class="dark-black">
                         <!-- START HERO -->
                         <tr>
-                            <td id="h-logo-td" align="center" class="dark-black">
-                                <a href="https://www.deriv.com">
-                                    <img id="h-logo-black" class="hide-dark-h-logo dark-h-logo-low-width" src="https://static.deriv.com/logos/deriv-black.png" title="Deriv.com">
-                                    <div class="h-logo-white-div" style="display: none;" align="center">
-                                        <img src="https://static.deriv.com/logos/deriv-white.png" id="h-logo-white" class="white-h-logo-low-width" title="Deriv.com"/>
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="mobile-hide">
-                            <td class="h-img-td" align="center">
-                                <input type="image" src="https://static.deriv.com/email/images/header-2023/key-green-gray.png"/>
-                            </td>
-                        </tr> 
-                        <tr style="display: none; mso-hide:all;" class="mb-visible-block">
-                            <td class="h-img-td" align="center">
-                                <input type="image" src="https://static.deriv.com/email/images/header-2023/key-green-gray-m.png"/>
+                            <td id="header-td">
+                                <!--[if (gte mso 9)|(IE)]>
+                                    <table id="ol-title-img-tb" align="center"><tr><td align="center">
+                                <![endif]-->
+                                <table id="title-img-tb">
+                                    <tr>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                            <td width="330">
+                                                <img src="https://static-natalia.vercel.app/0-images/layout-4-testing.png" width="330" height="180"/>
+                                            </td>
+                                        <![endif]-->
+                                        <!--[if !gte mso 9]><!-- -->
+                                        <td id="image-title-td" align="center">
+                                            <img src="https://static-natalia.vercel.app/0-images/layout-4-testing.png" alt=""/>
+                                        </td>
+                                        <!--<![endif]-->
+                                        <td align="left" class="top-right-td">
+                                            <!--[if (gte mso 9)|(IE)]>
+                                                <table width="270" height="180" margin="0">
+                                                    <tr>
+                                                        <td class="logo-img-td" style="padding-left: 15px;">
+                                                            <a href="https://www.deriv.com">
+                                                            <img src="https://static.deriv.com/logos/deriv-white-2023.png" width="58" title="Deriv.com">
+                                                        </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="title-text-td" style="padding-left: 15px; padding-top: 20px;">
+                                                            <h1><font face="Ubuntu, Arial, sans-serif">MT5 unavailable on Apple App Store</font></h1>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            <![endif]-->
+                                            <!--[if !gte mso 9]><!-- -->
+                                            <table id="logo-title-tb">
+                                                <tr>
+                                                    <td class="logo-img-td">
+                                                        <a href="https://www.deriv.com">
+                                                            <img src="https://static.deriv.com/logos/deriv-white-2023.png" width="58" title="Deriv.com">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="title-text-td">
+                                                        <h1>Your new USD account has been created</h1>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--<![endif]-->
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--[if (gte mso 9)|(IE)]></td></tr></table>
+                                <![endif]-->
                             </td>
                         </tr>
                         <!-- Headlilne -->
                         
                         <!-- End of Headlilne -->
-                        <tr>
-                            <td id="title-td" align="center" style="padding: 15px 50px 20px;" class="dark-black">
-                                <p class="dark-subtext mb-title">Your new USD account <br>has been created</p>
-                            </td>
-                        </tr>
                         <tr>
                             <td class="paragraph-td" align="center" style="padding: 0px 30px 20px 30px;" class="dark-black">
                                 <p class="dark-subtext">Your Deriv USD account is ready.</p>
@@ -477,20 +556,20 @@
                         <tr>
                             <td align="center" class="dark-black" style="padding: 0px 30px 5px;">
                                 <!--[if (gte mso 9)|(IE)]>
-                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://app.deriv.com/cashier/deposit" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="10%" strokecolor="#ff444f" fillcolor="#ff444f">
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://app.deriv.com/cashier/deposit" style="height:40px;v-text-anchor:middle;width:230px;" arcsize="30%" strokecolor="#ff444f" fillcolor="#ff444f">
                                 <w:anchorlock/>
-                                <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">Take me to the Cashier</center>
+                                <center style="color:#fff;font-family:sans-serif;font-size:14px;font-weight:bold;">Take me to the Cashier</center>
                                 </v:roundrect>
                                 <![endif]-->
                                 <!--[if !gte mso 9]><!-- -->
-                                <a class="button" href="https://app.deriv.com/cashier/deposit" target="_blank" style="background: #ff444f; padding: 10px 16px; border: 0; border-radius: 4px; font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 14px; color: #fff !important; font-weight: bold; text-decoration: none; text-align: center; line-height: 20px; display: inline-block; overflow: visible;" onmouseover="this.style.backgroundColor='#d43e47'" onmouseout="this.style.backgroundColor='#ff444f'">Take me to the Cashier</a>
+                                <a class="button" href="https://app.deriv.com/cashier/deposit" target="_blank">Take me to the Cashier</a>
                                 <!--<![endif]-->
                             </td>
                         </tr>
                         <!-- Payment methods Desktop -->
                         <tr>
                             <td align="center" style="padding: 5px 60px;" class="dark-gray">
-                                <p class="dark-subtext">Payment methods available in Nigeria</p>
+                                <p class="dark-subtext"><strong>Payment methods available in Nigeria</strong></p>
                             </td>
                         </tr>
                         <!-- Payment method 2 col -->
