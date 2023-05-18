@@ -215,8 +215,13 @@
                         width: 85%;
                         border-radius: 15px;
                     }
-                    #title-text-td{ height: 100%; vertical-align: middle; }
-                    #title-text-td h1{ padding: 10px 15px; margin-top: 15px; color: #fff; font-size: 25px; font-weight: 700; text-align: center;}
+                    #title-text-td{ 
+                        height: 100%;
+                        vertical-align: middle; 
+                        background-color: #ff444f;
+                        width: 50%;
+                    }
+                    #title-text-td h1{ padding: 10px 15px; margin-top: 15px; color: #fff; font-size: 22px; font-weight: 700; text-align: center;}
                     #title-td p{
                         margin: 0;
                         color: #333;
@@ -391,14 +396,17 @@
                         .payment-limits-td{ font-family: 'IBM Plex Sans'; color: #999; font-size: 10px; line-height: 15px;}
                         .payment-link-td{ font-family: 'IBM Plex Sans'; width: 100%; text-align: center; font-size: 14px; line-height: 21px; padding: 15px 0 10px;}
                     }
+                    @media screen and (max-width: 520px){
+                        #title-text-td h1{ padding: 10px 10px 10px 15px; margin-top: 5px; font-size: 18px; font-weight: 600; }
+                    }
                     @media screen and (max-width: 460px){
                         .logo-img-td img{ width: 40px !important; padding: 15px 0 0 15px; }
-                        #title-text-td h1{ padding: 10px 10px 10px 15px; margin-top: 5px; font-size: 18px; font-weight: 600; }
+                        #title-text-td h1{ padding: 10px 10px 10px 15px; margin-top: 5px; font-size: 16px; font-weight: 600; }
                         #image-title-td{ width: 40%; height: 160px; vertical-align: top;}
                         #image-title-td img{ height: 180px; }
                     }
                     @media screen and (max-width: 380px){ 
-                        #title-text-td h1{ font-size: 16px; }
+                        #title-text-td h1{ font-size: 14px; }
                     }
                 /* End of mobile styles */
                 /* Dark mode styles */
@@ -484,17 +492,17 @@
                                     <table id="ol-title-img-tb" align="center"><tr><td align="center">
                                 <![endif]-->
                                 <table id="title-img-tb">
-                                    <tr style="background-color:#FF444F;" >
+                                    <tr>
                                         <!--[if (gte mso 9)|(IE)]>
                                             <td width="330">
                                                 <img src="https://static-natalia.vercel.app/0-images/layout-4-testing.png" width="330" height="180"/>
                                             </td>
                                         <![endif]-->
                                         <!--[if !gte mso 9]><!-- -->
-                                        <td  align="center" style="background-color: #FF444F; " >
-                                            <img src="https://static-natalia.vercel.app/0-images/layout4-test.png" width="300px";>
+                                        <td  class="image-title-td" style="background-color: #ff444f;">
+                                            <img src="https://static-natalia.vercel.app/0-images/layout4-test.png" style=" width:100% !important; max-width: 330px !important; vertical-align: bottom !important;">
                                         </td>
-                                        <td id="title-text-td">
+                                        <td id="title-text-td" style="background-color: #ff444f; width: 45%; max-width: 270px !important;">
                                             <h1>Your new USD account has been created</h1>
                                         </td>
                                         <!--<![endif]-->
